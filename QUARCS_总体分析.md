@@ -27,7 +27,7 @@
   - 职责：移动端容器应用（Qt 5.12.8，Android），内置浏览器加载 Web 前端；附带 IP 地址发现器（监听局域网广播包，自动发现服务器）。目录下还包含 `webQMLlinuxDemo`（Qt/QML Demo）。
   - 构建：Qt Creator/Android Studio 编译为 APK，README 给出编译环境版本与步骤。
 
-- `QUARCS_APP/QUARCS_NodeJs-Transponder`（NodeJS 中转器）
+- `QUARCS_NodeJs-Transponder`（NodeJS 中转器）
   - 职责：WebSocket 报文转发与在线状态管理；提供 LAN 广播（`broadcast_server`）用于客户端发现；充当前端与 Qt 服务器之间的消息“总线/网关”。
   - 运行：`npm install`，`chmod 0777 broadcast_server`，`node server.js`。
 
@@ -65,7 +65,7 @@
 - `QUARCS_stellarium-web-engine`
   - 引擎 wasm：`make js`（需 emsdk + scons）。
   - 前端：Docker 方式 `make setup && make dev`；或 `yarn && yarn run dev`。
-- `QUARCS_APP/QUARCS_NodeJs-Transponder`
+- `QUARCS_NodeJs-Transponder`
   - `npm install && chmod 0777 broadcast_server && node server.js`。
 - `QUARCS_QT-SeverProgram`
   - 依赖安装（INDI/QHYCCD/OpenCV/Qt 等）→ `cmake .. && make && make install` → 运行 `client`。
@@ -84,7 +84,7 @@ QUARCS/
 │  ├─ apps/web-frontend/          # Vue 前端
 │  └─ tile-server/                # 星图瓦片服务与脚本
 ├─ QUARCS_APP/                    # 移动端容器（Qt/Android），含 QML Demo
-│  └─ QUARCS_NodeJs-Transponder/  # NodeJS 中转器（WebSocket 转发/发现）
+├─ QUARCS_NodeJs-Transponder/     # NodeJS 中转器（WebSocket 转发/发现）
 └─ QUARCS_README/                 # 汇总文档与安装指引
 ```
 
